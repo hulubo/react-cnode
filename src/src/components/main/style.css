@@ -1,64 +1,70 @@
 /*header*/
 
 .navbar {
+  position: relative;
   font-size: 14px;
-  width: 100%; // height: 66px;
-  background: #0f0f0f url(https://p1.pstatp.com/large/66be00066eb639694007) no-repeat center top;
+  width: 100%;
+  background: #444;
+}
+.navbar-inner {
+  margin: auto;
+  padding: 5px;
 }
 
-.navbar li {
-    display: inline-block;
-    line-height: 48px;
+.navbar-inner .brand{
+  float: left;
+  width: 160px;
+  padding: 3px 20px;
+  line-height: 34px;
+  color: #ccc;
+  font-weight: 700;
 }
 
-.navbar ul li{
+/* 清除浮动 */
+.navbar-inner::after{
+    display: block;
+    clear: both;
+    content: '';
+    height: 0px;
+}
+
+
+.navbar-inner ul{
+  float: right;
+  margin-right: 0;
+  margin-bottom: 0;
+}
+
+
+.navbar-inner ul li{
   margin: 0 20px;
+  display: inline-block;
+  line-height: 40px;
 }
 
-.navbar ul li a{
+.navbar-inner ul li a{
     color: rgba(255, 255, 255, 0.7);
-    position: relative;
     letter-spacing: .1rem;
 }
 
 
-.navbar ul li a:hover {
+.navbar-inner ul li a:hover {
   color: rgba(255, 255, 255, 1);
 }
 
-.navbar ul li a:focus {
+.navbar-inner ul li a:focus {
   text-decoration: none;
 }
 
-.navbar ul li:nth-child(2) img{
+.navbar-inner ul li:nth-child(2) img{
   vertical-align: middle;
 }
 
-.navbar ul li:nth-child(2) img a{
+.navbar-inner ul li:nth-child(2) img a{
   font-size: 16px;
   &:hover {
     color: rgba(255, 255, 255, 0.7);
   }
-}
-
-.barstyle {
-  max-width: 1200px;
-  margin: 0 auto;
-  height: 100%;
-  background: transparent;
-}
-.logostyle {
-  line-height: 66px;
-  font-size: 18px;
-}
-.logostyle .Iconstyle {
-  color: white;
-  font-size: 32px!important;
-  font-weight: 100;
-  opacity: 0.7;
-  vertical-align: middle;
-  margin-right: 10px;
-  transform: rotate(180deg);
 }
 
 
